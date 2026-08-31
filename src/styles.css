@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-cream: #f3ede3;
+  --color-paper: #fffbf7;
+  --color-ink: #1c1917;
+  --color-muted: #6f675c;
+  --color-timber: #3d2a1e;
+  --color-ember: #c2410c;
+  --color-ember-dark: #9a3412;
+  --color-frame: #4a3124;
+  --color-sill: #6b4534;
+  --color-mist: #e7dfd2;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --shadow-card:
+    0 0 0 1px rgb(28 25 23 / 0.06), 0 10px 30px -12px rgb(28 25 23 / 0.28);
+  --shadow-card-hover:
+    0 0 0 1px rgb(28 25 23 / 0.08), 0 16px 40px -12px rgb(28 25 23 / 0.34);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    outline: 1px solid rgb(28 25 23 / 0.08);
+    outline-offset: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

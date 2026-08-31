@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      font-style: normal;
+      font-weight: 600;
+      src: url("og-fonts/cormorant-600.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Cormorant Garamond";
+      font-style: italic;
+      font-weight: 500;
+      src: url("og-fonts/cormorant-italic.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 500;
+      src: url("og-fonts/outfit-500.ttf") format("truetype");
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #3d2a1e;
+    }
+
+    .scene {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background: #3d2a1e;
+    }
+
+    .frame {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgb(28 25 23 / 0.10), rgb(28 25 23 / 0.04)),
+        url("file:///workspace/public/images/wood.jpg") center / cover;
+    }
+
+    .opening {
+      position: absolute;
+      top: 40px;
+      left: 52px;
+      right: 52px;
+      bottom: 56px;
+      overflow: hidden;
+      background: #1c1917;
+      box-shadow:
+        inset 0 0 0 3px #c4a06a,
+        inset 0 0 0 6px #3d2a1e,
+        inset 0 18px 40px rgb(28 25 23 / 0.35);
+    }
+
+    .view {
+      position: absolute;
+      inset: -8px;
+      width: calc(100% + 16px);
+      height: calc(100% + 16px);
+      object-fit: cover;
+      object-position: 50% 42%;
+      filter: saturate(1.08) contrast(1.06);
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 42%, transparent 28%, rgb(28 25 23 / 0.42) 100%),
+        linear-gradient(180deg, rgb(28 25 23 / 0.08), rgb(28 25 23 / 0.22));
+      pointer-events: none;
+    }
+
+    .sill {
+      position: absolute;
+      left: 36px;
+      right: 36px;
+      bottom: 18px;
+      height: 38px;
+      background:
+        linear-gradient(180deg, #6b4534 0%, #3d2a1e 55%, #2a1c14 100%);
+      box-shadow: 0 8px 16px rgb(28 25 23 / 0.4);
+    }
+    .sill::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: 0;
+      height: 5px;
+      background: linear-gradient(180deg, #d4b48a, #8a5a3a);
+    }
+
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 48.5%;
+      transform: translate(-50%, -50%);
+      width: 640px;
+      padding: 30px 48px 28px;
+      text-align: center;
+      background: #fffbf7;
+      border: 1px solid rgb(61 42 30 / 0.14);
+      box-shadow:
+        0 1px 0 rgb(255 251 247 / 0.9) inset,
+        0 22px 50px -12px rgb(28 25 23 / 0.5);
+    }
+
+    .mark {
+      width: 52px;
+      height: 30px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      font-size: 92px;
+      line-height: 0.86;
+      letter-spacing: 0.12em;
+      color: #1c1917;
+      text-indent: 0.12em;
+    }
+
+    .word {
+      display: block;
+    }
+
+    .word-sub {
+      margin-top: 8px;
+      font-size: 30px;
+      letter-spacing: 0.46em;
+      text-indent: 0.46em;
+      color: #3d2a1e;
+      font-weight: 600;
+    }
+
+    .rule {
+      width: 44px;
+      height: 2px;
+      margin: 16px auto 12px;
+      background: #c2410c;
+    }
+
+    .tag {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      color: #3d2a1e;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="frame"></div>
+    <div class="opening">
+      <img class="view" src="file:///workspace/public/images/castle-enhanced.jpg" alt="" />
+      <div class="vignette"></div>
+    </div>
+    <div class="sill"></div>
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 52 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 28 L16 6 L30 28 Z" fill="#3D2A1E"/>
+        <path d="M22 28 L36 4 L50 28 Z" fill="#5C3D2C"/>
+        <g fill="#C2410C">
+          <rect x="21" y="7" width="2.4" height="9" rx="0.7"/>
+          <rect x="24.8" y="7" width="2.4" height="9" rx="0.7"/>
+          <rect x="28.6" y="7" width="2.4" height="9" rx="0.7"/>
+          <rect x="21" y="14.6" width="10" height="2.3" rx="0.5"/>
+          <rect x="24.8" y="16" width="2.4" height="10" rx="0.7"/>
+        </g>
+      </svg>
+      <h1 class="title">
+        <span class="word">RYTRO</span>
+        <span class="word word-sub">CATERING</span>
+      </h1>
+      <div class="rule"></div>
+      <p class="tag">u stóp zamku</p>
+    </div>
+  </div>
+</body>
+</html>

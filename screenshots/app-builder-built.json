@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Rytro Catering",
+      "hasCanvas": false,
+      "bodyTextLen": 2154,
+      "bodyTextHash": "7791ff525ee2f1894a5925b3250af402a540e768e3946e0e76e23be877aee161",
+      "bodyTextPrefix": "RYTRO CATERING START MENU REZERWACJA O NAS KONTAKT MOJE ZAMÓWIEN",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Rytro Catering",
+      "hasCanvas": false,
+      "bodyTextLen": 2098,
+      "bodyTextHash": "edcf06411f5bd7a24b3557a9e1741999b5febae235c03e57965b5c93774ec61d",
+      "bodyTextPrefix": "RYTRO CATERING Górskie smaki, na zamówienie. Bez kolejek. Autent",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
